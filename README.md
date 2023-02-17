@@ -9,7 +9,6 @@ This is a solution to the [Fylo dark theme landing page challenge on Frontend Me
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -27,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [live](https://your-live-site-url.com)
+- Live Site URL: [live](https://leandrnvs.github.io/Fylo-dark-theme-landing-page/)
 
 ## Author
 
