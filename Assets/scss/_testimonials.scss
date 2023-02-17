@@ -1,0 +1,30 @@
+@use "media";
+
+.testimonials {
+  width: 90%;
+  margin: 0 auto;
+
+  .row {
+    --row-gap: 2rem;
+
+    @include media.min() {
+      --cols: 3;
+      --row-gap: 0;
+      --column-gap: 2rem;
+      justify-content: center;
+    }
+  }
+
+  &__decoration {
+    width: 3rem;
+    margin-left: 1rem;
+
+    @include media.min() {
+      width: 5rem;
+      position: relative;
+      top: 1rem;
+      left: 1rem;
+      z-index: -1;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@use "variables" as var;
+
+.section {
+  padding: {
+    left: 2.5rem;
+    right: 2.5rem;
+  }
+
+  &__title {
+    color: map-get(var.$colors, "text");
+    text-align: center;
+    font: {
+      size: map-get(var.$font-size, "title");
+      family: var.$font-family-raleway;
+    }
+
+    margin: 2rem 0;
+  }
+
+  &__subtitle {
+    --mt: 1rem;
+    color: map-get(var.$colors, "text");
+    text-align: center;
+    margin-top: var(--mt);
+    font-size: var(--font-size);
+    font: {
+      size: map-get(var.$font-size, "subtitle");
+      family: var.$font-family-raleway;
+    }
+
+    &--start {
+      @extend .section__subtitle;
+      text-align: left;
+    }
+  }
+
+  &__text {
+    --mt: 0;
+    --mb: 0;
+
+    color: map-get(var.$colors, "text");
+    text-align: center;
+    margin: {
+      top: var(--mt);
+      bottom: var(--mb);
+    }
+    font: {
+      size: map-get(var.$font-size, "text");
+      family: var.$font-family-open;
+    }
+    line-height: 1.6;
+
+    &--start {
+      @extend .section__text;
+      text-align: left;
+    }
+  }
+
+  &__button {
+    --height: 40px;
+
+    background: linear-gradient(
+      to right,
+      map-get(var.$colors, "gradient-1"),
+      map-get(var.$colors, "gradient-2")
+    );
+    font: {
+      size: map-get(var.$font-size, "text");
+      family: var.$font-family-raleway;
+      weight: 700;
+    }
+    color: map-get(var.$colors, "text");
+    height: var(--height);
+    border-radius: var(--height);
+    width: 100%;
+    max-width: 200px;
+    display: block;
+
+    &:hover {
+      background: map-get(var.$colors, "gradient-1");
+    }
+  }
+
+  &__illustration {
+    margin: auto;
+    padding: 2rem;
+  }
+
+  &__link {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    color: map-get(var.$colors, "gradient-1");
+    font: {
+      size: map-get(var.$font-size, "text");
+      family: var.$font-family-raleway;
+    }
+    border-bottom: 1px solid map-get(var.$colors, "gradient-1");
+  }
+}
+
+a.section__button {
+  line-height: var(--height);
+  text-align: center;
+  margin: 0 auto;
+}

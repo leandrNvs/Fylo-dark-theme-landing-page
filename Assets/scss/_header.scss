@@ -1,0 +1,21 @@
+@use "media";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  margin-bottom: 4rem;
+
+  @include media.min() {
+    padding: 4rem 2rem;
+  }
+
+  &__logo {
+    width: 10rem;
+
+    @include media.min() {
+      width: 15rem;
+    }
+  }
+}

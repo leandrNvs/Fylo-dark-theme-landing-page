@@ -1,0 +1,22 @@
+@use "variables" as var;
+@use "media";
+
+.navbar {
+  &__link {
+    color: map-get(var.$colors, "text");
+    padding: 0 1rem;
+    font: {
+      size: map-get(var.$font-size, "text");
+      family: var.$font-family-raleway;
+    }
+
+    @include media.min() {
+      padding: 0 3rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}

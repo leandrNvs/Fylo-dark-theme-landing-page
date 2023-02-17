@@ -1,0 +1,20 @@
+$font-size: (
+  "title": 3rem,
+  "subtitle": 1.8rem,
+  "text": 1.4rem,
+  "card": 1.3rem,
+);
+
+$colors: (
+  "intro": hsl(217, 28%, 15%),
+  "main": hsl(218, 28%, 13%),
+  "footer": hsl(216, 53%, 9%),
+  "card": hsl(219, 30%, 18%),
+  "gradient-1": hsl(176, 68%, 64%),
+  "gradient-2": hsl(198, 60%, 50%),
+  "error": hsl(0, 100%, 63%),
+  "text": hsl(0, 0%, 100%),
+);
+
+$font-family-raleway: "raleway", sans-serif;
+$font-family-open: "Open Sans", sans-serif;

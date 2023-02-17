@@ -1,0 +1,51 @@
+@use "variables" as var;
+@use "media";
+
+.card {
+  background-color: map-get(var.$colors, "card");
+  border-radius: 0.5rem;
+  padding: 2rem;
+  font: {
+    size: map-get(var.$font-size, "card");
+    family: var.$font-family-open;
+  }
+  color: map-get(var.$colors, "text");
+
+  @include media.min() {
+    padding: {
+      top: 3rem;
+      bottom: 3rem;
+    }
+  }
+
+  &__text {
+    &--bold {
+      font-weight: bold;
+    }
+
+    &--small {
+      font-size: 0.8em;
+      opacity: 0.7;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 2rem;
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__profile {
+    --size: 40px;
+
+    height: var(--size);
+    width: var(--size);
+    border-radius: 50%;
+  }
+}

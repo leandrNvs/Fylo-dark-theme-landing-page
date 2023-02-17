@@ -1,0 +1,58 @@
+@use "variables" as var;
+@use "media";
+
+.get-access {
+  background-color: map-get(var.$colors, "main");
+  width: 90%;
+  box-shadow: 0 0 10px rgba(#000, 0.4);
+  border-radius: 0.8rem;
+  padding: 4rem 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+  @include media.min() {
+    width: 60%;
+
+    .section__subtitle {
+      font-size: map-get(var.$font-size, "title");
+    }
+  }
+
+  .section__text {
+    --mt: 2rem;
+    --mb: 3rem;
+  }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px;
+  gap: 2rem;
+
+  @include media.min() {
+    grid-template-columns: 1fr 250px;
+  }
+
+  &__helper {
+    color: map-get(var.$colors, "error");
+    font-size: map-get(var.$font-size, "text");
+    margin-left: 3rem;
+    margin-top: -1rem;
+    font-family: var.$font-family-open;
+  }
+
+  &__input {
+    border-radius: 40px;
+    border: 0;
+    padding-left: 3rem;
+    font-family: var.$font-family-open;
+  }
+
+  .section__button {
+    max-width: unset;
+    height: 50px;
+  }
+}

@@ -1,0 +1,5 @@
+@mixin min($size: 1100px) {
+  @media (min-width: $size) {
+    @content;
+  }
+}

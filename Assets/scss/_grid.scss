@@ -1,0 +1,14 @@
+.row {
+  --cols: 1;
+  --row-gap: 0px;
+  --column-gap: 0px;
+
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--row-gap);
+  column-gap: var(--column-gap);
+
+  .col {
+    flex-basis: calc(100% / var(--cols) - var(--column-gap));
+  }
+}

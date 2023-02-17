@@ -1,0 +1,36 @@
+@use "variables" as var;
+@use "media";
+
+.stay-productive {
+  @include media.min() {
+    .row {
+      --cols: 2;
+      --column-gap: 8rem;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .section__text--start {
+    --mb: 2rem;
+    --mt: 2rem;
+  }
+
+  .section__subtitle--start {
+    --mt: 2rem;
+    font-size: map-get(var.$font-size, "title");
+
+    br {
+      display: none;
+
+      @include media.min() {
+        display: block;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: auto;
+  }
+}

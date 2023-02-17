@@ -1,0 +1,28 @@
+@use "reset";
+@use "variables" as var;
+@use "grid";
+@use "section";
+@use "hero";
+@use "header";
+@use "navbar";
+@use "services";
+@use "stay-productive";
+@use "testimonials";
+@use "card";
+@use "get-access";
+@use "footer";
+
+body {
+  font-size: map-get(var.$font-size, "normal");
+  background-color: map-get(var.$colors, "main");
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  padding-bottom: 30rem;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 15rem;
+}

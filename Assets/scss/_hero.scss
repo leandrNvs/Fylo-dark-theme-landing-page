@@ -1,0 +1,31 @@
+@use "variables" as var;
+@use "media";
+
+.hero {
+  background: map-get(var.$colors, "intro") url("../images/bg-curvy-mobile.svg")
+    no-repeat left bottom;
+  background-size: 100%;
+  padding-bottom: 8rem;
+
+  @include media.min() {
+    background: map-get(var.$colors, "intro")
+      url("../images/bg-curvy-desktop.svg") no-repeat left bottom;
+  }
+
+  .section__text {
+    --mb: 2rem;
+
+    @include media.min() {
+      max-width: 430px;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
+  }
+
+  &__container {
+    max-width: 540px;
+    margin: auto;
+  }
+}

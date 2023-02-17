@@ -1,0 +1,35 @@
+@use "media";
+
+.services {
+  max-width: 400px;
+  margin: auto;
+
+  @include media.min() {
+    max-width: unset;
+    width: 70%;
+  }
+
+  .row {
+    --row-gap: 10rem;
+    justify-content: center;
+    align-items: baseline;
+
+    @include media.min() {
+      --cols: 2;
+      --row-gap: 4rem;
+      --column-gap: 8rem;
+    }
+  }
+
+  &__icon {
+    margin: auto;
+  }
+
+  .section__text {
+    --mt: 1rem;
+  }
+
+  .section__subtitle {
+    --mt: 4rem;
+  }
+}
